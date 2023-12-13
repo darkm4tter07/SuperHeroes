@@ -1,0 +1,73 @@
+/* Navbar.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; /* Adjust height as needed */
+    padding: 0 20px; /* Add padding to the sides */
+    background-image: url('../image/navbar-cover.jpeg');
+    width: 100%; /* Set width to 100% */
+  }
+  
+  
+  
+  .header__name {
+    color: rgb(255, 255, 255);
+    font-size: 3rem; /* Responsive font size */
+    font-family: "Montserrat", sans-serif;
+    margin-right: auto;
+    text-shadow: 2px 4px 4px rgba(17, 44, 94, 0.3);
+  }
+  .header__name:hover{
+    text-shadow: 2px 4px 4px rgba(172, 90, 3, 0.8);
+  }
+  
+  
+  
+  .search__character {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search__bar {
+    height: 30px; /* Responsive height */
+    min-width: 200px; /* Adjust width as needed */
+    border: 2px solid #4caf50; /* Green border color */
+    border-radius: 15px; /* Rounded corners */
+    padding: 8px; /* Add padding for better appearance */
+    outline: none; /* Remove default input outline */
+    transition: border-color 0.3s; /* Add smooth transition effect */
+  }
+  
+  .search__bar:focus {
+    border-color: #ff8c00; /* Change border color on focus */
+  }
+  
+  .search__button {
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 8px 16px; /* Adjust padding as needed */
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s; /* Add smooth transition effect */
+  }
+  
+  .search__button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  /* Media query for small screens */
+  @media screen and (max-width: 650px) {
+    .header {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .name__container {
+      margin-bottom: 10px;
+    }
+  }
+  
