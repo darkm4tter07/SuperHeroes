@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function useCharacter(url) {
+function useCharacter(url, watchlist) {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error,setError] = useState(null);
@@ -22,7 +22,7 @@ function useCharacter(url) {
 
     useEffect(() => {
         getData();
-    },[])
+    },[...watchlist]);
   return {data, loading, error};
 }
 export default useCharacter;

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import useCharacter from "./useCharacter";
 
 function CardsContainer({searchText}) {
   const { data, loading, error } = useCharacter(
-    `https://www.superheroapi.com/api.php/727054372039115/search/${searchText}`
+    `https://www.superheroapi.com/api.php/727054372039115/search/${searchText.split(" ").join("")}`,
+    [searchText.split(" ").join("")]
   );
   if (data.length) {
     return (

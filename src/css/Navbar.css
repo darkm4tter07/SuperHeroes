@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0px;
     height: 80px; /* Adjust height as needed */
     padding: 0 20px; /* Add padding to the sides */
     background-image: url('../image/navbar-cover.jpeg');
