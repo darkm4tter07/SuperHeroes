@@ -11,7 +11,7 @@ function App() {
     <div className='App'>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/card/:id" element={<CharPage />} />
+        <Route path="/card/:name" element={<CharPage />} />
       </Routes>
     </div>
   );

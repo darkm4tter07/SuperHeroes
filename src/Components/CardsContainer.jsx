@@ -16,6 +16,7 @@ function CardsContainer({searchText}) {
             name = {d.name}
             imageUrl = {d.image.url}
             cardKey={d.id}
+            data={d}
           />
         ))}
       </div>
