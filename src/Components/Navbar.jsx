@@ -5,7 +5,7 @@ function Navbar({onSearch}) {
     const [searchText, setSearchText] = useState("");
 
     const handleSearch = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         onSearch(searchText);
         setSearchText("");
     }
@@ -15,7 +15,7 @@ function Navbar({onSearch}) {
       <div className="name__container">
         <h1 className='header__name'>SuperHeroes</h1>
       </div>
-      <form className="search__character" onClick={handleSearch}>
+      <form className="search__character" onSubmit={handleSearch} >
         <input className='search__bar' type='text' placeholder='Character Name' value={searchText} onChange={(event)=>{setSearchText(event.target.value)}} />
         <button className='search__button' type='submit'>Search</button>
       </form>
