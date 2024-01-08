@@ -5,7 +5,7 @@ function Navbar({onSearch}) {
     const [searchText, setSearchText] = useState("");
 
     const handleSearch = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         onSearch(searchText);
         setSearchText("");
     }
