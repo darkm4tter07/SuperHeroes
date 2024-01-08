@@ -15,7 +15,7 @@ function Navbar({onSearch}) {
         <h1 className='header__name'>SuperHeroes</h1>
       </div>
       <div className="search__character">
-        <input className='search__bar' type='text' placeholder='Character Name' value={searchText} onChange={(event)=>{setSearchText(event.target.value)}} />
+        <input className='search__bar' type='search' placeholder='Character Name' value={searchText} onSearch={(event)=>{setSearchText(event.target.value)}} />
         <button className='search__button' onClick={handleSearch}>Search</button>
       </div>
     </div>
