@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const userSlice = createSlice({
     name: "character",
     initialState: {value: {
-        name: "Batman",
+        name: "",
         intelligence: 0,
         strength: 0,
         speed: 0,
