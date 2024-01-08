@@ -1,42 +1,24 @@
 import React, { useState } from 'react';
 import '../css/Navbar.css';
 
-function Navbar({ onSearch }) {
-  const [searchText, setSearchText] = useState("");
+function Navbar({onSearch}) {
+    const [searchText, setSearchText] = useState("");
 
-  const handleSearch = () => {
-    onSearch(searchText);
-    setSearchText("");
-  };
-
-  const handleInputChange = (event) => {
-    setSearchText(event.target.value);
-  };
-
-  const handleKeyPress = (event) => {
-    if (event.key === 'Enter') {
-      handleSearch();
+    const handleSearch = (e) => {
+        e.preventDefault();
+        onSearch(searchText);
+        setSearchText("");
     }
-  };
 
   return (
     <div className='header'>
       <div className="name__container">
         <h1 className='header__name'>SuperHeroes</h1>
       </div>
-      <div className="search__character">
-        <input
-          className='search__bar'
-          type='search'
-          placeholder='Character Name'
-          value={searchText}
-          onChange={handleInputChange}
-          onKeyPress={handleKeyPress}
-        />
-        <button className='search__button' onClick={handleSearch}>
-          Search
-        </button>
-      </div>
+      <form className="search__character" onClick={handleSearch}>
+        <input className='search__bar' type='text' placeholder='Character Name' value={searchText} onChange={(event)=>{setSearchText(event.target.value)}} />
+        <button className='search__button' type='submit'>Search</button>
+      </form>
     </div>
   );
 }
