@@ -37,8 +37,7 @@ const options = {
       display: false,
     },
     title: {
-      display: true,
-      text: '',
+      display: false,
     },
   },
 };
