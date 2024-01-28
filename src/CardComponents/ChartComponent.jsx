@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
-import { Bar } from 'react-chartjs-2';
+import { Bar} from 'react-chartjs-2';
+import { defaults } from 'chart.js';
 import Chart from 'chart.js/auto';
 import {
   Chart as ChartJS,
@@ -11,6 +12,10 @@ import {
   Legend,
 } from 'chart.js';
 
+defaults.font.family = 'Arial';
+defaults.font.color = 'rgb(15,11,11)';
+// defaults.global.defaultFontColor = 'rgb(15,11,11)';
+
 const options = {
     indexAxis: 'y',
     elements: {
@@ -18,6 +23,7 @@ const options = {
         borderWidth: 2,
       },
     },
+    
     responsive: true,
     plugins: {
       legend: {
@@ -29,6 +35,7 @@ const options = {
     },
   };
 
+
 function ChartComponent(){
     const character = useSelector((state) => state.character.value);
 
@@ -38,10 +45,9 @@ function ChartComponent(){
       labels,
       datasets:[
         {
-          label: null,
           data: [character.intelligence,character.strength,character.speed, character.durability,character.power,character.combat],
-          borderColor: 'rgb(255, 99, 132)',
-          backgroundColor: 'rgba(255, 99, 132, 0.5)',
+          borderColor: 'rgb(11, 48, 112)',
+          backgroundColor: '#e28743',
         }
       ]
     }

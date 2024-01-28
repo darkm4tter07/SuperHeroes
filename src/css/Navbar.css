@@ -1,27 +1,27 @@
 /* Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
 .header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     margin-top: 0px;
-    height: 80px; /* Adjust height as needed */
+    height: 150px; /* Adjust height as needed */
     padding: 0 20px; /* Add padding to the sides */
-    background-image: url('../image/navbar-cover.jpeg');
     width: 100%; /* Set width to 100% */
   }
   
-  
-  
   .header__name {
     color: rgb(255, 255, 255);
-    font-size: 3rem; /* Responsive font size */
-    font-family: "Montserrat", sans-serif;
+    font-size: 4rem; /* Responsive font size */
+    font-family: "Jua", sans-serif;
     margin-right: auto;
     text-shadow: 2px 4px 4px rgba(17, 44, 94, 0.3);
   }
   .header__name:hover{
     text-shadow: 2px 4px 4px rgba(172, 90, 3, 0.8);
+    cursor: pointer;
   }
   
   
@@ -34,7 +34,10 @@
   .search__bar {
     height: 30px; /* Responsive height */
     min-width: 200px; /* Adjust width as needed */
-    border: 2px solid #4caf50; /* Green border color */
+    border: 2px solid #ffffff; /* Green border color */
+    font-family: "Jua",sans-serif;
+    color: #ffffff;
+    background: transparent;
     border-radius: 15px; /* Rounded corners */
     padding: 8px; /* Add padding for better appearance */
     outline: none; /* Remove default input outline */
@@ -42,16 +45,16 @@
   }
   
   .search__bar:focus {
-    border-color: #ff8c00; /* Change border color on focus */
+    border-color: #606060; /* Change border color on focus */
   }
   
   .search__button {
     margin-left: 10px;
     cursor: pointer;
     padding: 8px 16px; /* Adjust padding as needed */
-    background-color: #4caf50;
+    background-color: #000000;
     color: #fff;
-    border: none;
+    border-color: #fff;
     border-radius: 20px; /* Rounded corners */
     transition: background-color 0.3s; /* Add smooth transition effect */
   }
@@ -66,7 +69,7 @@
       flex-direction: column;
       height: auto;
     }
-  
+    
     .name__container {
       margin-bottom: 10px;
     }

@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function useCharacter(url, watchlist) {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState("");
     const [loading, setLoading] = useState(false);
-    const [error,setError] = useState(null);
+    const [error,setError] = useState();
     const getData = () => {
         setLoading(true);
         axios

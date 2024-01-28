@@ -1,9 +1,19 @@
 .char__page{
-    background-color: black;
+    background-color: rgb(34, 40, 13);
     height: 100vh;
     width: 100vw;
+    background-attachment: fixed;
 }
 
 p{
     color: white;
+}
+
+.Chart{
+    margin-top: 50px;
+    display: flex;
+    height: 500px;
+    width: auto;
+    align-items: center;
+    justify-content: center;
 }
