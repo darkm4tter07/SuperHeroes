@@ -1,19 +1,16 @@
-import { useEffect, useState } from 'react';
-import './css/App.css';
-import CardsContainer from './Components/CardsContainer';
-import Navbar from './Components/Navbar';
-import Home from './Home';
+import './App.css';
+import Navbar from './Components/Navbar.jsx';
+import Home from './Pages/Home.jsx';
 import { Routes, Route } from 'react-router-dom';
-import CharPage from './CardComponents/CharPage';
 
 function App() {
   return (
-    <div className='App'>
+    <div className='w-full h-full'>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/card/:name" element={<CharPage />} />
       </Routes>
-    </div>
+    </div> 
   );
 }
 

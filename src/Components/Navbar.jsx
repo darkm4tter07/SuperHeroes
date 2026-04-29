@@ -1,26 +1,19 @@
-import React, { useState } from 'react';
-import '../css/Navbar.css';
+import { useNavigate } from "react-router-dom";
+import SearchBar from "./SearchBar/SearchBar";
 
-function Navbar({onSearch}) {
-    const [searchText, setSearchText] = useState("");
-
-    const handleSearch = (e) => {
-        e.preventDefault();
-        onSearch(searchText);
-        setSearchText("");
-    }
+function Navbar() {
+  const navigate = useNavigate();
 
   return (
-    <div className='header'>
-      <div className="name__container">
-        <h1 className='header__name'>SuperHeroes</h1>
+    <nav className="p-4 bg-slate-900">
+      <div className="max-w-6xl mx-auto flex items-center gap-4">
+        <div className="text-white font-bold">NightWing</div>
+        <SearchBar
+          onSelect={(hero) => navigate(`/character/${hero.id}`)}
+          onSubmit={(q) => navigate(`/search?q=${encodeURIComponent(q)}`)}
+        />
       </div>
-      <form className="search__character" onSubmit={handleSearch} >
-        <input className='search__bar' type='text' placeholder='Character Name' value={searchText} onChange={(event)=>{setSearchText(event.target.value)}} />
-        <button className='search__button' type='submit'>Search</button>
-      </form>
-    </div>
+    </nav>
   );
 }
-
 export default Navbar;
